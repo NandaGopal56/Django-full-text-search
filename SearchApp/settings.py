@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'books',
-    'rest_framework'
+    'rest_framework',
+    'django.contrib.postgres'
 ]
 
 MIDDLEWARE = [
@@ -76,9 +77,17 @@ WSGI_APPLICATION = 'SearchApp.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': BASE_DIR / 'db.sqlite3',
+    # }
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': '', 
+        'USER': '', 
+        'PASSWORD': '',
+        'HOST': '', 
+        'PORT': '5432',
     }
 }
 

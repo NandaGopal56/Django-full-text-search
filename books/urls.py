@@ -18,5 +18,6 @@ from django.urls import path, include
 from . import views
 
 urlpatterns = [
-    path('search/', views.search, name='search'),
+    path('basicsearch/', views.Basicsearch, name='search'),
+    path('full-text-search/', views.FullTextSearch, name='search'),
 ]
